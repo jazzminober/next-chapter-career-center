@@ -1,11 +1,506 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A customizable career resource center template."><title>Next Chapter — Career Resource Center</title><style>
-:root{--ink:#183c34;--cream:#faf8f0;--muted:#626e65;--line:#dce0d4;--coral:#ed886b;--pale:#e8eddf}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.6 Arial,sans-serif;overflow-x:hidden;position:relative;isolation:isolate}button,a,input{font:inherit}button,a{ -webkit-tap-highlight-color:transparent}button{cursor:pointer}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #a44a30;outline-offset:5px}.cursor-glow{position:fixed;left:0;top:0;width:280px;height:280px;border-radius:50%;pointer-events:none;opacity:0;transform:translate(-50%,-50%);background:radial-gradient(circle, rgba(237,136,107,0.10) 0%, rgba(237,136,107,0.06) 18%, rgba(130,160,136,0.05) 35%, rgba(250,248,240,0) 72%);filter:blur(24px);z-index:9999;mix-blend-mode:screen;transition:opacity .2s ease-out}.skip{position:absolute;top:-60px}.skip:focus{top:0;background:white;z-index:10}header,main,nav,.pill{position:relative;z-index:1}header{border-bottom:1px solid var(--line);padding:23px 5%;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:10px;font-family:Georgia,serif;white-space:nowrap}.brand-mark{display:inline-grid;place-items:center;background:var(--ink);color:var(--cream);border-radius:50%;width:33px;height:33px;font:22px Georgia;flex-shrink:0}.brand-text{display:flex;flex-direction:column;line-height:1}.brand-name{font-size:25px;letter-spacing:-1px}.brand-author{font-family:Arial,sans-serif;font-size:11px;letter-spacing:1.7px;text-transform:uppercase;color:var(--muted);margin-top:4px}.brand-author .byline{font-size:inherit;letter-spacing:inherit;text-transform:lowercase}.brand-author .name{font-size:inherit;letter-spacing:inherit;text-transform:uppercase}nav{display:flex;gap:23px;align-items:center}nav button{border:0;background:transparent;color:var(--muted);padding:8px 0;font-size:13px}nav button.active{color:var(--ink);box-shadow:0 2px var(--ink)}.pill{font-size:10px;letter-spacing:1.8px;border:1px solid var(--line);border-radius:30px;padding:6px 12px;white-space:nowrap}main{max-width:1320px;margin:auto;padding:0 6%}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:2.4px;font-weight:700;color:var(--muted)}.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:35px;align-items:center;padding:65px 0 50px}h1{font:clamp(48px,5.5vw,78px)/1.05 Georgia,serif;letter-spacing:-3px;margin:23px 0}h1 em{font-weight:normal;color:#718365}p{color:var(--muted)}.intro{max-width:440px;font-size:17px}.actions{display:flex;gap:14px;align-items:center;margin-top:28px}.primary{border:0;background:var(--ink);color:white;padding:13px 22px;border-radius:6px;font-size:13px}.secondary{border:1px solid var(--line);background:transparent;color:var(--ink);padding:12px 20px;border-radius:6px;font-size:13px}.note{font-size:11px;margin-top:18px}.art{width:100%;overflow:visible}.float{animation:float 6s ease-in-out infinite}.float2{animation:float 7s ease-in-out -3s infinite}.dash{stroke-dasharray:7 9;animation:dash 30s linear infinite}@keyframes float{50%{transform:translateY(-9px)}}@keyframes dash{to{stroke-dashoffset:-160}}.section-line{border-top:1px solid var(--line);padding-top:28px;display:flex;align-items:end;justify-content:space-between;gap:20px}h2{font:34px/1.2 Georgia,serif;letter-spacing:-1px;margin:9px 0 0}.small{font-size:12px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin:25px 0 50px}.card{padding:25px;border:1px solid var(--line);border-radius:12px;text-align:left;background:#fffdf7;color:var(--ink);position:relative;transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-4px);box-shadow:0 10px 20px #183c340b}.card:nth-child(2){background:#edf0e5}.card:nth-child(3){background:#faeade}.icon{font-size:25px;display:block;margin-bottom:25px}.card h3{font:25px Georgia;margin:8px 0}.card p{font-size:13px;margin-bottom:25px}.arrow{position:absolute;right:23px;bottom:22px}.tag{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}.journey{display:grid;grid-template-columns:.9fr 1.5fr;gap:45px;padding:34px;background:var(--pale);border-radius:15px;margin-bottom:45px}.steps{display:flex;align-items:center;gap:10px}.step{flex:1;border:0;background:none;color:var(--ink);padding:10px 0}.step b{display:grid;place-items:center;margin:0 auto 12px;background:var(--cream);border:1px solid #bdcbb2;width:48px;height:48px;border-radius:50%;font-weight:normal}.step.chosen b{background:var(--ink);color:white}.connector{height:1px;background:#b9c5ac;width:28px}.step span{font-size:12px}.stepdetail{font-size:12px;text-align:center;min-height:22px}.bottom{display:flex;justify-content:space-between;padding:22px 0;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}.page{display:none;padding:55px 0}.page.visible{display:block;animation:appear .35s ease-out}@keyframes appear{from{opacity:0;transform:translateY(7px)}}.page h1{font-size:58px}.pagehead{max-width:700px;margin-bottom:35px}.slots{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.slot{border:1px solid var(--line);background:#fffdf7;border-radius:12px;padding:27px;min-height:180px}.slot h3{font:24px Georgia;margin:0 0 14px}.placeholder{height:7px;background:#e4e6dc;border-radius:6px;margin:12px 0;width:85%}.placeholder.short{width:55%}.slot small{display:block;color:var(--muted);font-size:12px;margin-top:20px}.check{display:flex;gap:12px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line);font-size:14px}.check input{accent-color:var(--ink);width:18px;height:18px}progress{width:100%;height:12px;accent-color:var(--ink)}.disclaimer{padding:14px 18px;background:var(--pale);border-radius:7px;font-size:12px;color:var(--muted);margin-bottom:25px}footer button{border:0;background:none;color:var(--muted);font-size:11px}.mobile{display:none}@media(max-width:1050px){header{flex-wrap:wrap}nav{order:3;width:100%;justify-content:space-between;gap:10px}nav button{font-size:12px}}@media(max-width:650px){header{padding:18px 6%}.pill{font-size:8px}nav{overflow-x:auto;justify-content:flex-start;gap:20px}nav button{white-space:nowrap}.hero{grid-template-columns:1fr;padding:35px 0}h1{letter-spacing:-2px}.hero .art{max-height:330px}.cards,.slots{grid-template-columns:1fr}.card{min-height:200px}.journey{grid-template-columns:1fr;padding:25px;gap:15px}.section-line{align-items:start}.section-line .small{display:none}.bottom{gap:20px}.page h1{font-size:43px}.steps{gap:4px}.connector{width:10px}.actions{flex-wrap:wrap}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
-</style></head><body><a href="#main" class="skip">Skip to content</a><header><a href="#home" class="brand"><span class="brand-mark">↗</span><span class="brand-text"><span class="brand-name">next chapter</span><span class="brand-author"><span class="byline">by</span> <span class="name">JAZZMIN OBER</span></span></span></a><nav aria-label="Main navigation" id="nav"></nav><span class="pill">CAREER RESOURCE CENTER</span></header><main id="main" tabindex="-1"><section id="home" class="page visible" style="padding-top:0"><div class="hero"><div><div class="eyebrow">A little curiosity. A world of possibility.</div><h1>Make Room for What’s Possible.</h1><p class="intro">[Audience Introduction, Next Steps, and Available Support]</p><div class="actions"><a class="primary" href="#discover">Find your starting point ↗</a><a class="secondary" href="#explore">Explore the possibilities</a></div><p class="note">[Target Population] · [Professional Setting]</p></div><svg class="art" viewBox="0 0 500 430" role="img" aria-label="An illustrated career journey with branching paths, stepping stones, and a compass"><defs><pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#ccd3c0"/></pattern></defs><circle cx="260" cy="220" r="190" fill="#e9edde"/><circle cx="260" cy="220" r="190" fill="url(#grid)"/><path d="M110 370 C50 290 230 320 195 240 S330 210 290 130 S390 100 400 60" fill="none" stroke="#b7c4a8" stroke-width="42"/><path class="dash" d="M110 370 C50 290 230 320 195 240 S330 210 290 130 S390 100 400 60" fill="none" stroke="#faf8f0" stroke-width="2"/><g class="float"><rect x="33" y="99" width="146" height="98" rx="13" fill="#fffdf7" stroke="#d5dacb"/><circle cx="63" cy="130" r="15" fill="#f6d7c7"/><path d="m55 131 6 6 11-14" fill="none" stroke="#183c34" stroke-width="2"/><path d="M88 127h67M88 137h45M52 164h103M52 177h73" stroke="#c6cfc0" stroke-width="5" stroke-linecap="round"/></g><g class="float2"><rect x="306" y="265" width="155" height="112" rx="13" fill="#183c34"/><path d="M330 346v-23h20v23m12 0v-43h20v43m12 0v-64h20v64" fill="#a7b892"/><path d="m332 305 35-26 25 5 33-35m-13 0h13v13" fill="none" stroke="#f0a487" stroke-width="3"/></g><g transform="translate(310 125)"><circle r="50" fill="#ed886b"/><circle r="38" fill="none" stroke="#f7c7b4"/><path d="m-15 17 8-25 24-10-9 26z" fill="#183c34"/><path d="m-15 17 24-9-16-16z" fill="#fff4dd"/></g><circle cx="111" cy="368" r="12" fill="#183c34" stroke="#faf8f0" stroke-width="5"/><path d="M400 63V20m0 0 34 9-34 11" fill="#ed886b" stroke="#183c34" stroke-width="2"/><g transform="translate(225 360)"><path d="M0 30V0M0 19C-30 20-30-4 0 6M0 12C25 12 25-13 0 0" fill="#839a74" stroke="#627e56" stroke-width="2"/></g><path d="m190 60 4 10 10 4-10 4-4 10-4-10-10-4 10-4" fill="#ed886b"/></svg></div><div class="section-line"><div><span class="eyebrow">Choose Your Starting Point</span><h2>Make Room for What’s Possible.</h2></div><span class="small">Explore at your own pace ↘</span></div><div class="cards"><button class="card" data-go="discover"><span class="icon">◉</span><span class="tag">01 / Look inward</span><h3>Discover Yourself</h3><p>[Interests, strengths, values, and self-discovery tools.]</p><span class="arrow">↗</span></button><button class="card" data-go="explore"><span class="icon">⌁</span><span class="tag">02 / Look outward</span><h3>Explore Your Paths</h3><p>[Career possibilities, education, and training resources.]</p><span class="arrow">↗</span></button><button class="card" data-go="plan"><span class="icon">↗</span><span class="tag">03 / Move forward</span><h3>Take Your Next Step</h3><p>[Small actions, practical plans, and meaningful support.]</p><span class="arrow">↗</span></button></div><div class="journey"><div><span class="eyebrow">Your Pathway, at a Glance</span><h2>There’s More Than<br>One Way Forward.</h2><p class="small">Select a step to preview its place in your journey.</p></div><div><div class="steps" id="steps"></div><p class="stepdetail" id="stepdetail" aria-live="polite">[Self-Discovery Activity]</p></div></div></section><div id="pages"></div><footer class="bottom"><span>next chapter <span style="margin-left:15px">Career Resource Center</span></span><span><a href="#references">References</a> · <a href="#about">About This Center</a></span></footer></main><script>
-const sections=[['home','Home'],['discover','Discover'],['explore','Explore'],['plan','Your Plan'],['support','Support & Access'],['framework','Our Approach'],['references','References']];
-const data={discover:['Start with yourself.','Assessment & Self-Discovery',['Assessment or Tool','Purpose & Benefits','Understanding Your Results','Limitations & Ethical Use','Reflection Activity','Your Next Steps']],explore:['A world of possibilities.','Career & Pathway Exploration',['Career Exploration Resource','Education & Training Resource','Workforce & Readiness Resource','Additional Pathway Resource']],plan:['Turn possibility into a plan.','From Exploration to Action',['Your Next-Step Checklist','Short-Term & Long-Term Goals','Decision-Making Worksheet','Questions for a Counselor or Mentor']],support:['Support belongs in every journey.','Equity & Access',['Financial Support','Disability & Accessibility','First-Generation & Community Support','Navigating Systemic Barriers']],framework:['A thoughtful approach to your future.','Theory Into Practice',['Career Development Framework','What This Means for You','Connect Theory to an Activity','Our Professional Approach']],references:['The research behind the resources.','Sources & Acknowledgments',['APA Reference 01','APA Reference 02','APA Reference 03','Media Credits & Acknowledgments']],about:['A space for your next chapter.','About This Center',['Who This Center Serves','Professional Context','Career & Transition Needs','What Users Can Gain']]};
-document.querySelector('#nav').innerHTML=sections.map(([id,name])=>`<button data-go="${id}">${name}</button>`).join('');
-document.querySelector('#pages').innerHTML=Object.entries(data).map(([id,[title,sub,slots]])=>`<section class="page" id="${id}" aria-labelledby="title-${id}"><div class="pagehead"><span class="eyebrow">${sub}</span><h1 id="title-${id}">${title}</h1><p>[Audience-Specific Introduction]</p></div><div class="disclaimer">[Population, Professional Context, and Career Development Approach]</div><div class="slots">${slots.map((s,i)=>`<article class="slot"><h3>${s}</h3>${id==='plan'&&i===0?`<p class="small">Career Planning Checklist</p><label class="check"><input type="checkbox">[Self-Discovery Step]</label><label class="check"><input type="checkbox">[Exploration Step]</label><label class="check"><input type="checkbox">[Practical Next Step]</label><p class="small" id="count" aria-live="polite">0 of 3 steps complete</p><progress value="0" max="3" aria-label="Checklist completion"></progress><button class="secondary" id="reset" style="margin-top:15px">Reset checklist</button>`:`<div class="placeholder"></div><div class="placeholder"></div><div class="placeholder short"></div><small>${id==='references'?'[APA Reference]':id==='explore'?'[Resource Link and Population-Specific Annotation: 2–4 Sentences]':id==='discover'&&i===3?'[Privacy, Accessibility, Cultural Considerations, and Interpretation Guidance]':'[Section Content]'}</small>`}</article>`).join('')}</div></section>`).join('');
-const names=['Discover','Explore','Plan','Connect'];document.querySelector('#steps').innerHTML=names.map((n,i)=>`${i?'<span class="connector" aria-hidden="true"></span>':''}<button class="step ${i===0?'chosen':''}" aria-pressed="${i===0}" data-step="${i}"><b>0${i+1}</b><span>${n}</span></button>`).join('');
-document.addEventListener('click',e=>{const go=e.target.closest('[data-go]');if(go)location.hash=go.dataset.go;const step=e.target.closest('[data-step]');if(step){document.querySelectorAll('.step').forEach(s=>{s.classList.toggle('chosen',s===step);s.setAttribute('aria-pressed',s===step)});document.querySelector('#stepdetail').textContent=['[Self-Discovery Activity]','[Career and Education Pathway]','[Decision-Making and Action Activity]','[Equity, Access, and Support Resource]'][step.dataset.step]}});
-function route(){let id=location.hash.slice(1)||'home';if(!document.getElementById(id))id='home';document.querySelectorAll('.page').forEach(p=>p.classList.toggle('visible',p.id===id));document.querySelectorAll('nav button').forEach(b=>{b.classList.toggle('active',b.dataset.go===id);if(b.dataset.go===id)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});window.scrollTo(0,0)}window.addEventListener('hashchange',()=>{route();document.querySelector('#main').focus({preventScroll:true})});route();function update(){const n=document.querySelectorAll('.check input:checked').length;document.querySelector('#count').textContent=`${n} of 3 steps complete`;document.querySelector('progress').value=n}document.querySelectorAll('.check input').forEach(c=>c.addEventListener('change',update));document.querySelector('#reset').onclick=()=>{document.querySelectorAll('.check input').forEach(c=>c.checked=false);update()};
-const glow=document.createElement('div');glow.className='cursor-glow';document.body.appendChild(glow);document.addEventListener('pointermove',e=>{glow.style.opacity='1';glow.style.left=`${e.clientX}px`;glow.style.top=`${e.clientY}px`;});document.addEventListener('pointerleave',()=>glow.style.opacity='0');document.addEventListener('pointerdown',()=>glow.style.opacity='0.9');document.addEventListener('pointerup',()=>glow.style.opacity='1');</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Next Chapter — Career Resource Center</title>
+  <style>
+    :root{
+      --ink:#183c34;
+      --cream:#faf8f0;
+      --muted:#626e65;
+      --line:#dce0d4;
+      --sage:#dfe9d5;
+      --salmon:#d8745a;
+      --pale:#e8eddf;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; }
+
+    .cursor-glow {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(237,136,107,0.10) 0%, rgba(237,136,107,0.06) 18%, rgba(130,160,136,0.05) 35%, rgba(250,248,240,0) 72%);
+      filter: blur(24px);
+      z-index: 9999;
+      mix-blend-mode: screen;
+      transition: opacity 0.2s ease-out;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      padding: 23px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: Georgia, serif;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      display: inline-grid;
+      place-items: center;
+      background: var(--ink);
+      color: var(--cream);
+      border-radius: 50%;
+      width: 33px;
+      height: 33px;
+      font: 22px Georgia;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .brand-name {
+      font-size: 25px;
+      letter-spacing: -1px;
+    }
+
+    .brand-author {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .brand-author .byline {
+      font-size: inherit;
+      letter-spacing: inherit;
+      text-transform: lowercase;
+    }
+
+    .brand-author .name {
+      font-size: inherit;
+      letter-spacing: inherit;
+      text-transform: uppercase;
+    }
+
+    .pill {
+      font-size: 10px;
+      letter-spacing: 1.8px;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 6px 12px;
+      white-space: nowrap;
+      color: var(--ink);
+      background: rgba(255,255,255,0.2);
+    }
+
+    main {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 6%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 35px;
+      align-items: center;
+      padding: 65px 0 50px;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2.4px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    h1 {
+      font: clamp(48px, 5.5vw, 78px)/1.05 Georgia, serif;
+      letter-spacing: -3px;
+      margin: 23px 0;
+      color: var(--ink);
+    }
+
+    .intro {
+      max-width: 440px;
+      font-size: 17px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+
+    .primary, .secondary {
+      padding: 13px 22px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      display: inline-block;
+      transition: 0.2s ease;
+    }
+
+    .primary {
+      background: var(--ink);
+      color: white;
+    }
+
+    .secondary {
+      border-color: var(--line);
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .note {
+      font-size: 11px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .placeholder-note {
+      margin-top: 14px;
+      border: 1px solid #f2b5a4;
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 12px;
+      line-height: 1.6;
+      color: #425148;
+      max-width: 760px;
+      background: #f9e5df;
+    }
+
+    .placeholder-note strong {
+      display: inline-block;
+      color: var(--salmon);
+      font-weight: 700;
+      font-size: 13px;
+      margin-right: 4px;
+    }
+
+    .art {
+      width: 100%;
+      max-width: 520px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .section-line {
+      border-top: 1px solid var(--line);
+      padding-top: 28px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .section-line h2 {
+      font: 34px/1.2 Georgia, serif;
+      letter-spacing: -1px;
+      margin: 8px 0 0;
+    }
+
+    .small {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.24);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px 20px;
+      min-height: 220px;
+      position: relative;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .card .tag {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      font-family: Georgia, serif;
+      font-size: clamp(24px, 2vw, 34px);
+      letter-spacing: -1px;
+      margin: 0 0 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .card .arrow {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      font-size: 24px;
+      color: var(--ink);
+    }
+
+    .journey {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 18px;
+      margin-top: 44px;
+      padding: 30px 0 20px;
+      border-top: 1px solid var(--line);
+    }
+
+    .journey h2 {
+      font: 56px/0.95 Georgia, serif;
+      letter-spacing: -2px;
+      margin: 12px 0;
+      max-width: 640px;
+    }
+
+    .journey .small {
+      font-size: 18px;
+      max-width: 540px;
+      color: var(--muted);
+    }
+
+    .steps {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+
+    .step {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: var(--ink);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .step b {
+      font-size: 10px;
+      opacity: 0.8;
+    }
+
+    .stepdetail {
+      margin-top: 20px;
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 360px;
+    }
+
+    .bottom {
+      border-top: 1px solid var(--line);
+      padding: 24px 0 40px;
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero, .journey, .cards {
+        grid-template-columns: 1fr;
+      }
+      .section-line {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#home" class="brand">
+      <span class="brand-mark">↗</span>
+      <span class="brand-text">
+        <span class="brand-name">next chapter</span>
+        <span class="brand-author"><span class="byline">by</span> <span class="name">JAZZMIN OBER</span></span>
+      </span>
+    </a>
+
+    <span class="pill">CAREER RESOURCE CENTER</span>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div>
+        <div class="eyebrow">A little curiosity. A world of possibility.</div>
+        <h1>Make Room for What’s Possible.</h1>
+        <p class="intro">[Audience Introduction, Next Steps, and Available Support]</p>
+
+        <div class="actions">
+          <a class="primary" href="#discover">Find your starting point ↗</a>
+          <a class="secondary" href="#explore">Explore the possibilities</a>
+        </div>
+
+        <p class="note">[Target Population] · [Professional Setting]</p>
+
+        <p class="placeholder-note">
+          <strong>Message for Dr. Heep:</strong> The text in brackets serves as a placeholder (for organization and reference for me as I add to the website) and will be replaced with its respective content throughout the course.
+        </p>
+      </div>
+
+      <svg class="art" viewBox="0 0 500 430" role="img" aria-label="An illustrated career journey with branching paths, stepping stones, and a compass">
+        <defs>
+          <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="1" fill="#ccd3c0" />
+          </pattern>
+        </defs>
+        <circle cx="260" cy="220" r="190" fill="#e9edde" />
+        <circle cx="260" cy="220" r="190" fill="url(#grid)" />
+        <path d="M110 370 C50 290 230 320 195 240 S330 210 290 130 S390 100 400 60" fill="none" stroke="#b7c4a8" stroke-width="42" />
+        <path class="dash" d="M110 370 C50 290 230 320 195 240 S330 210 290 130 S390 100 400 60" fill="none" stroke="#faf8f0" stroke-width="2" />
+        <g class="float">
+          <rect x="33" y="99" width="146" height="98" rx="13" fill="#fffdf7" stroke="#d5dacb" />
+          <circle cx="63" cy="130" r="15" fill="#f6d7c7" />
+          <path d="m55 131 6 6 11-14" fill="none" stroke="#183c34" stroke-width="2" />
+          <path d="M88 127h67M88 137h45M52 164h103M52 177h73" stroke="#c6cfc0" stroke-width="5" stroke-linecap="round" />
+        </g>
+        <g class="float2">
+          <rect x="306" y="265" width="155" height="112" rx="13" fill="#183c34" />
+          <path d="M330 346v-23h20v23m12 0v-43h20v43m12 0v-64h20v64" fill="#a7b892" />
+          <path d="m332 305 35-26 25 5 33-35m-13 0h13v13" fill="none" stroke="#faf8f0" stroke-width="2" />
+        </g>
+      </svg>
+    </section>
+
+    <section class="section-line">
+      <div>
+        <span class="eyebrow">Choose Your Starting Point</span>
+        <h2>Make Room for What’s Possible.</h2>
+      </div>
+      <span class="small">Explore at your own pace ↘</span>
+    </section>
+
+    <div class="cards">
+      <button class="card" type="button">
+        <span class="tag">01 / Look inward</span>
+        <h3>Discover Yourself</h3>
+        <p>[Interests, strengths, values, and self-discovery tools.]</p>
+        <span class="arrow">↗</span>
+      </button>
+
+      <button class="card" type="button">
+        <span class="tag">02 / Look outward</span>
+        <h3>Explore Your Paths</h3>
+        <p>[Career possibilities, education, and training resources.]</p>
+        <span class="arrow">↗</span>
+      </button>
+
+      <button class="card" type="button">
+        <span class="tag">03 / Move forward</span>
+        <h3>Take Your Next Step</h3>
+        <p>[Small actions, practical plans, and meaningful support.]</p>
+        <span class="arrow">↗</span>
+      </button>
+    </div>
+
+    <div class="journey">
+      <div>
+        <span class="eyebrow">Your Pathway, at a Glance</span>
+        <h2>There’s More Than<br>One Way Forward.</h2>
+        <p class="small">Select a step to preview its place in your journey.</p>
+      </div>
+
+      <div>
+        <div class="steps">
+          <button class="step" type="button"><b>01</b> Discover</button>
+          <button class="step" type="button"><b>02</b> Explore</button>
+          <button class="step" type="button"><b>03</b> Plan</button>
+        </div>
+        <p class="stepdetail">[Self-Discovery Activity]</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bottom">
+    <span>next chapter</span>
+    <span>Career Resource Center</span>
+  </footer>
+
+  <script>
+    const glow = document.createElement('div');
+    glow.className = 'cursor-glow';
+    document.body.appendChild(glow);
+
+    document.addEventListener('pointermove', (e) => {
+      glow.style.opacity = '1';
+      glow.style.left = `${e.clientX}px`;
+      glow.style.top = `${e.clientY}px`;
+    });
+
+    document.addEventListener('pointerleave', () => {
+      glow.style.opacity = '0';
+    });
+
+    document.addEventListener('pointerdown', () => {
+      glow.style.opacity = '0.9';
+    });
+
+    document.addEventListener('pointerup', () => {
+      glow.style.opacity = '1';
+    });
+  </script>
+</body>
+</html>
